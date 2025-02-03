@@ -34,7 +34,7 @@ RUN pnpm install
 RUN pnpm run build
 
 # The second stage builds the backend.
-FROM python:3.11-bullseye as backend-builder
+FROM python:3.12-bullseye as backend-builder
 WORKDIR /phoenix
 COPY ./src /phoenix/src
 COPY ./pyproject.toml /phoenix/
